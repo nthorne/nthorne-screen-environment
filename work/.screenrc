@@ -113,3 +113,8 @@ defscrollback 5000
 # read and write screen clipboard to X clipboard.
 bind > eval writebuf "exec sh -c 'xsel -bi </tmp/screen-exchange'"
 bind < eval "exec sh -c 'xsel -bo >/tmp/screen-exchange'" readbuf
+
+# split, switch to the split and create a new window
+bind s eval split focus screen
+bind v eval "split -v" focus screen
+bind q eval "stuff ^D" remove
